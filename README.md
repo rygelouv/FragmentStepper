@@ -11,7 +11,7 @@ when you navigate back an forth with a good memory management
 ## Add it to your project
 
 In your project root build.gradle with:
-```groovy
+```gradle
 allprojects {
     repositories {
         maven { url "https://jitpack.io" }
@@ -20,7 +20,7 @@ allprojects {
 ```
 and in the app or module build.gradle:
 
-```groovy
+```gradle
 dependencies {
     compile 'com.github.rygelouv:fragmentstepper:v0.0.1-beta'
 }
