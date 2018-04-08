@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity(), OnFragmentInteractionListener, StepsMa
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        stepper = findViewById(R.id.view_pager)
+        stepper = findViewById(R.id.stepper)
         progressBar = findViewById(R.id.progress_bar)
 
         stepper.setParentActivity(this)
