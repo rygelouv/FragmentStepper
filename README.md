@@ -46,14 +46,14 @@ class MainActivity : AppCompatActivity(), StepsManager{
             return 3
         }
     
-        override fun getStep(position: Int): Fragment {
-            return when(position){
-                0 -> FirstFragment()
-                1 -> SecondFragment()
-                2 -> ThirdFragment.newInstance("Boom", "Baam")
-                else -> FirstFragment()
-            }
+    override fun getStep(position: Int): Fragment {
+        return when(position){
+            0 -> FirstFragment()
+            1 -> SecondFragment()
+            2 -> ThirdFragment.newInstance("Boom", "Baam")
+            else -> FirstFragment()
         }
+    }
 }
 ```
 #### Step 3: configure stepper
