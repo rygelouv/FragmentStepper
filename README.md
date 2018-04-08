@@ -3,9 +3,9 @@
 FragmentStepper is a library that aims to make the process of creating steps screen (wizards) based 
 on fragments more easy. The library handles internally:
 - Fragments state by using FragmentStatePagerAdapter so your fragment are restored even 
-when you navigate back an forth with a good memory management 
+when you navigate back and forth with a good memory management 
 - Animations for the transition between steps
-- Back an forth Navigation so you won't having to face the deadly deal of backstak management
+- Back and forth Navigation so you won't having to face the deadly deal of backstak management
 
 
 ## Add it to your project
