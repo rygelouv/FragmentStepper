@@ -11,7 +11,7 @@ when you navigate back an forth with a good memory management
 ## Add it to your project
 
 In your project root build.gradle with:
-```gradle
+```groovy
 allprojects {
     repositories {
         maven { url "https://jitpack.io" }
@@ -20,7 +20,7 @@ allprojects {
 ```
 and in the app or module build.gradle:
 
-```gradle
+```groovy
 dependencies {
     compile 'com.github.rygelouv:fragmentstepper:v0.0.1-beta'
 }
@@ -29,7 +29,7 @@ dependencies {
 ## How to use
 
 #### Step 1: add it to your layout
-```
+```xml
 <com.rygelouv.fragmentstepper.FragmentStepper
         android:layout_weight="1"
         android:id="@+id/stepper"
@@ -38,7 +38,7 @@ dependencies {
         />
 ```
 #### Step 2: let your activity inherit from `StepsManager` and implements methods
-```
+```kotlin
 class MainActivity : AppCompatActivity(), StepsManager{
     ...
     
@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity(), StepsManager{
 }
 ```
 #### Step 3: configure stepper
-```
+```kotlin
 stepper = findViewById(R.id.stepper)
 stepper.setParentActivity(this)
         stepper.stepsChangeListener = object : FragmentStepper.StepsChangeListener {
@@ -69,7 +69,7 @@ stepper.setParentActivity(this)
 ```
 #### Step 4: configure backstack in order to handle navigation
 In your activity, override the `onBackPressed()` method and add this code
-```
+```kotlin
 override fun onBackPressed() {
         if (stepper.currentItem == 0)
             super.onBackPressed()
