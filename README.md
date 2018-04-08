@@ -22,7 +22,7 @@ and in the app or module build.gradle:
 
 ```gradle
 dependencies {
-    compile 'com.github.rygelouv:fragmentstepper:v0.0.1-beta'
+    implementation 'com.github.Rygelouv:FragmentStepper:v0.0.1-beta'
 }
 ```
 
