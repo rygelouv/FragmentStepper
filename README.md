@@ -7,7 +7,7 @@ when you navigate back and forth with a good memory management
 - Animations for the transition between steps
 - Back and forth Navigation so you won't having to face the deadly deal of backstak management
 
-<img src="https://github.com/Rygelouv/FragmentStepper/blob/master/device-2018-04-08-232327.png" width="200"> <img src="https://github.com/Rygelouv/FragmentStepper/blob/master/device-2018-04-08-232349.png" width="200">
+<img src="https://github.com/Rygelouv/FragmentStepper/blob/master/videotogif_2018.04.09_10.32.45.gif" width="200"> <img src="https://github.com/Rygelouv/FragmentStepper/blob/master/device-2018-04-08-232349.png" width="200">
 
 ## Add it to your project
 
