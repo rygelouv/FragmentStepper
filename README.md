@@ -61,28 +61,29 @@ class MainActivity : AppCompatActivity(), StepsManager{
 ```kotlin
 stepper = findViewById(R.id.stepper)
 stepper.setParentActivity(this)
-        stepper.stepsChangeListener = object : FragmentStepper.StepsChangeListener {
-            override fun onStepsChanged() {
-                Toast.makeText(this@MainActivity, "Page changed", Toast.LENGTH_SHORT).show()
-                // Do whatever you want here
-            }
-        } 
+stepper.stepsChangeListener = object : FragmentStepper.StepsChangeListener {
+    override fun onStepsChanged() {
+        Toast.makeText(this@MainActivity, "Page changed", Toast.LENGTH_SHORT).show()
+        // Do whatever you want here
+    }
+} 
 ```
 #### Step 4: configure backstack in order to handle navigation
 In your activity, override the `onBackPressed()` method and add this code
 ```kotlin
 override fun onBackPressed() {
-        if (stepper.currentItem == 0)
-            super.onBackPressed()
-        else
-            stepper.currentItem = stepper.currentItem - 1
-    }
+    if (stepper.currentItem == 0)
+        super.onBackPressed()
+    else
+        stepper.currentItem = stepper.currentItem - 1
+}
 ```
 #### Step 5: there is no step 5. That's it you're all set
 
 ## TODO
 - Handle animations for transition 
-- Improve the manner of handling backstack 
+- Improve the way of handling backstack 
+- Profile for memory management
 
 # Credits
 
