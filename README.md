@@ -61,8 +61,8 @@ class MainActivity : AppCompatActivity(), StepsManager{
 ```kotlin
 stepper = findViewById(R.id.stepper)
 stepper.setParentActivity(this)
-stepper.stepsChangeListener = object : FragmentStepper.StepsChangeListener {
-    override fun onStepsChanged() {
+stepper.stepsChangeListener = object : FragmentStepper.StepChangeListener {
+    override fun onStepChanged(stepNumber: Int) {
         Toast.makeText(this@MainActivity, "Page changed", Toast.LENGTH_SHORT).show()
         // Do whatever you want here
     }
@@ -72,10 +72,7 @@ stepper.stepsChangeListener = object : FragmentStepper.StepsChangeListener {
 In your activity, override the `onBackPressed()` method and add this code
 ```kotlin
 override fun onBackPressed() {
-    if (stepper.currentItem == 0)
-        super.onBackPressed()
-    else
-        stepper.currentItem = stepper.currentItem - 1
+    if (stepper.isLastStep()) super.onBackPressed() else stepper.goToPreviousStep()
 }
 ```
 #### Step 5: there is no step 5. That's it you're all set

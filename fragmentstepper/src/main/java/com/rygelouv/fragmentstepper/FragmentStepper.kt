@@ -59,13 +59,23 @@ class FragmentStepper: ViewPager {
     {
         setCustomScroller()
         this.addOnPageChangeListener(object : OnPageChangeListener {
-            override fun onPageScrollStateChanged(state: Int) {
-                stepsChangeListener.onStepsChanged()
+            override fun onPageScrollStateChanged(position: Int) {
+                stepsChangeListener.onStepChanged(position)
             }
             override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {}
             override fun onPageSelected(position: Int) {}
         })
     }
+
+    fun goToNexStep() {
+        currentItem += 1
+    }
+
+    fun goToPreviousStep() {
+        currentItem -= 1
+    }
+
+    fun isLastStep(): Boolean = currentItem == 0
 
     fun setParentActivity(activity: AppCompatActivity)
     {
@@ -95,6 +105,6 @@ class FragmentStepper: ViewPager {
     }
 
     interface StepsChangeListener{
-        fun onStepsChanged()
+        fun onStepChanged(stepNumber: Int)
     }
 }

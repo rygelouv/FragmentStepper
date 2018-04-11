@@ -21,13 +21,13 @@ public class MainJavaActivity extends AppCompatActivity implements StepsManager,
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        stepper = findViewById(R.id.view_pager);
+        stepper = findViewById(R.id.stepper);
         progressBar = findViewById(R.id.progress_bar);
 
         stepper.setParentActivity(this);
         stepper.setStepsChangeListener(new FragmentStepper.StepsChangeListener() {
             @Override
-            public void onStepsChanged() {
+            public void onStepChanged(int stepNumber) {
                 Toast.makeText(MainJavaActivity.this, "Page changed java", Toast.LENGTH_SHORT).show();
                 progressBar.setProgress(stepper.getCurrentItem());
             }

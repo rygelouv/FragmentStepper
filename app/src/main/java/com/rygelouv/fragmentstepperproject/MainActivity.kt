@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity(), OnFragmentInteractionListener, StepsMa
 
         stepper.setParentActivity(this)
         stepper.stepsChangeListener = object : FragmentStepper.StepsChangeListener {
-            override fun onStepsChanged() {
+            override fun onStepChanged(stepNumber: Int) {
                 Toast.makeText(this@MainActivity, "Page changed", Toast.LENGTH_SHORT).show()
                 progressBar.progress = stepper.currentItem
             }
@@ -42,13 +42,10 @@ class MainActivity : AppCompatActivity(), OnFragmentInteractionListener, StepsMa
     }
 
     override fun onFragmentInteraction() {
-        stepper.currentItem = stepper.currentItem + 1
+        stepper.goToNexStep()
     }
 
     override fun onBackPressed() {
-        if (stepper.currentItem == 0)
-            super.onBackPressed()
-        else
-            stepper.currentItem = stepper.currentItem - 1
+        if (stepper.isLastStep()) super.onBackPressed() else stepper.goToPreviousStep()
     }
 }
