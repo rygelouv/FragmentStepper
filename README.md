@@ -5,7 +5,8 @@ on fragments more easy. The library handles internally:
 - Fragments state by using FragmentStatePagerAdapter so your fragment are restored even 
 when you navigate back and forth with a good memory management 
 - Animations for the transition between steps
-- Back and forth Navigation so you won't having to face the deadly deal of backstak management
+- Back and forth Navigation so you won't having to face the deadly deal of back stack management 
+because even Jake Wharton argues against the back stack: [https://youtu.be/arch-talk](https://youtu.be/nP_B5-jrbsY?t=2494)
 
 <img src="https://github.com/Rygelouv/FragmentStepper/blob/master/videotogif_2018.04.09_10.32.45.gif" width="250"> 
 
@@ -82,9 +83,13 @@ override fun onBackPressed() {
 - Improve the way of handling backstack 
 - Profile for memory management
 
-# Credits
+## How it's done ?
+FragmentStepper library is based on ViewPager but with some customization an adaptation to make fit for the 
+specific need of steps/wizards flows. 
 
-Author: Rygel Louv [http://www.rygelouv.wordpress.com/](http://www.rygelouv.wordpress.com/)
+## Credits
+
+Author: Rygel Louv [https://medium.com/@rygel](https://medium.com/@rygel)
 
 
 License
