@@ -5,8 +5,8 @@ on fragments more easy. The library handles internally:
 - Fragments state by using FragmentStatePagerAdapter so your fragment are restored even 
 when you navigate back and forth with a good memory management 
 - Animations for the transition between steps
-- Back and forth Navigation so you won't having to face the deadly deal of back stack management 
-because even Jake Wharton argues against the back stack: [https://youtu.be/arch-talk](https://youtu.be/nP_B5-jrbsY?t=2494)
+- Back and forth Navigation so you won't having to face the deadly deal of back stack management. 
+Even Jake Wharton argues against the fragment back stack: [https://youtu.be/arch-talk](https://youtu.be/nP_B5-jrbsY?t=2494)
 
 <img src="https://github.com/Rygelouv/FragmentStepper/blob/master/videotogif_2018.04.09_10.32.45.gif" width="250"> 
 
@@ -24,7 +24,7 @@ and in the app or module build.gradle:
 
 ```gradle
 dependencies {
-    implementation 'com.github.Rygelouv:FragmentStepper:v0.0.1-beta'
+    implementation 'com.github.Rygelouv:FragmentStepper:v0.0.2'
 }
 ```
 
