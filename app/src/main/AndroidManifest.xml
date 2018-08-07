@@ -12,13 +12,16 @@
         <activity android:name=".MainActivity">
 
         </activity>
-        <activity android:name=".MainJavaActivity"></activity>
-        <activity android:name=".testcustomviews.TestCustomViewActivity">
+        <activity android:name=".MainJavaActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity android:name=".testcustomviews.TestCustomViewActivity">
+
         </activity>
     </application>
 
