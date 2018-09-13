@@ -24,7 +24,7 @@ and in the app or module build.gradle:
 
 ```gradle
 dependencies {
-    implementation 'com.github.Rygelouv:FragmentStepper:v0.0.2'
+    implementation 'com.github.Rygelouv:FragmentStepper:v0.0.3'
 }
 ```
 

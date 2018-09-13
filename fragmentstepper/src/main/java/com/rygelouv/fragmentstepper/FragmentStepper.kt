@@ -5,6 +5,7 @@ import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import android.util.AttributeSet
 import android.view.MotionEvent
+import android.view.animation.DecelerateInterpolator
 import android.widget.Scroller
 
 
@@ -60,10 +61,11 @@ class FragmentStepper: ViewPager {
         setCustomScroller()
         this.addOnPageChangeListener(object : OnPageChangeListener {
             override fun onPageScrollStateChanged(position: Int) {
-                stepsChangeListener.onStepChanged(position)
             }
             override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {}
-            override fun onPageSelected(position: Int) {}
+            override fun onPageSelected(position: Int) {
+                stepsChangeListener.onStepChanged(position)
+            }
         })
     }
 
@@ -98,7 +100,7 @@ class FragmentStepper: ViewPager {
         }
     }
 
-    class CustomScroller(context: Context?) : Scroller(context) {
+    class CustomScroller(context: Context?) : Scroller(context, DecelerateInterpolator()) {
         override fun startScroll(startX: Int, startY: Int, dx: Int, dy: Int, duration: Int) {
             super.startScroll(startX, startY, dx, dy, 350)
         }
